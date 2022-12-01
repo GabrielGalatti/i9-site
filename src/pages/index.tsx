@@ -1,8 +1,11 @@
 import Head from "next/head";
-import { Box } from "@chakra-ui/react";
+import { Box, Flex, Button, Icon } from "@chakra-ui/react";
 import Header from "../components/organisms/Header";
+import { AiFillFire } from "react-icons/ai";
 import BgEllipse from "../components/atoms/BgEllipse";
 import Info from "../components/organisms/Info";
+import { COLORS } from "../config/colors";
+import { poppins } from "../config/fonts";
 
 export default function Home() {
   return (
@@ -13,11 +16,28 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Box px="10%" pos="relative" h="100vh">
+        <Box pos="absolute" right="0" top="0" zIndex={0}>
+          <BgEllipse />
+        </Box>
         <Header />
         <Info />
-        {/* <Box pos="absolute" right="0" top="0">
-          <BgEllipse />
-        </Box> */}
+        <Flex pos="absolute" right="2%" bottom="2%">
+          <Button
+            leftIcon={<Icon as={AiFillFire} color="currentcolor" />}
+            fontFamily={poppins.style.fontFamily}
+            color={COLORS.PRIMARY}
+            bgColor={COLORS.SECONDARY}
+            border="none"
+            py="15px"
+            px="30px"
+            fontWeight={600}
+            borderRadius={10}
+            boxShadow="2xl"
+            _hover={{ bgColor: COLORS.PRIMARY, color: COLORS.SECONDARY }}
+          >
+            Vamos Conversar
+          </Button>
+        </Flex>
       </Box>
     </>
   );

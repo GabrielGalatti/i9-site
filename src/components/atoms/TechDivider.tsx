@@ -1,7 +1,7 @@
 const TechDivider = () => {
   return (
     <svg
-      width="622"
+      width="100%"
       height="57"
       viewBox="0 0 622 57"
       fill="none"

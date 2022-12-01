@@ -8,7 +8,8 @@ const Header = () => {
       py="40px"
       justifyContent="space-between"
       alignItems="center"
-      zIndex={1000}
+      zIndex={100}
+      pos="relative"
     >
       <Logo />
       <Menu itens={["HOME", "PORTFÓLIO", "PROCESSOS", "BLOG"]} />
