@@ -7,6 +7,46 @@ export default function Home() {
   const DESCRIPTION =
     "A I9 ajuda você a *<b>construir o seu produto<b>* e *<br>* coloca-lo no mercado, para  *<b>começar a faturar o<b>* *<br>* *<b>mais rápido possível.<b>*";
 
+  const PROCESS_TITLE = "*<b>Seu produto<b>* no mercado em *<b>5 passos<b>*";
+  const PROCESS_BG_PATH = "/images/circuit-bg.png";
+  const PROCESS_ITEMS = [
+    {
+      title: "*<b>Meeting<b>*",
+      description:
+        "Uma reunião de 1 hora para conhecermos o *<br>* *<b>inovador e seu produto.<b>*",
+      imgAlt: "Meeting",
+      imgPath: "/images/meeting.svg",
+    },
+    {
+      title: "*<b>Planning<b>*",
+      description:
+        "Em conjunto com o inovador, *<b>criamos alternativas<b>* *<br>* *<b>para o lançamento no mercado com menor custo<b>* *<br>* *<b>e no menor tempo.<b>*",
+      imgAlt: "Planning",
+      imgPath: "/images/planning.svg",
+    },
+    {
+      title: "*<b>Prototyping<b>*",
+      description:
+        "Preparar, apontar... já! A prototipação do produto *<br>* é iniciada, focando na *<b>melhor experiência de<b>* *<br>* *<b>usuário possível e com uma identidade visual<b>* *<br>* *<b>focada no seu público alvo.<b>*",
+      imgAlt: "Prototyping",
+      imgPath: "/images/prototyping.svg",
+    },
+    {
+      title: "*<b>Developing<b>*",
+      description:
+        "Com os *<b>desenvolvedores mais criativos do<b>* *<br>* *<b>mercado<b>*, o produto toma forma, enquanto as *<br>* linhas de código surgem. ",
+      imgAlt: "Developing",
+      imgPath: "/images/developing.svg",
+    },
+    {
+      title: "*<b>Deploy<b>*",
+      description:
+        "O lançamento é iniciado!!! Estaremos te *<br>* acompanhando de perto para ajudar a *<b>atrair<b>* *<br>* *<b>novos clientes para seu produto!<b>*",
+      imgAlt: "Deploy",
+      imgPath: "/images/deploy.svg",
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -20,7 +60,11 @@ export default function Home() {
         menuItens={["HOME", "PORTFÓLIO", "PROCESSOS", "BLOG"]}
         callToActionLabel="VAMOS CONVERSAR"
       />
-      <Process />
+      <Process
+        title={PROCESS_TITLE}
+        bgPath={PROCESS_BG_PATH}
+        processItems={PROCESS_ITEMS}
+      />
     </>
   );
 }
