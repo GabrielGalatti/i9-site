@@ -9,6 +9,8 @@ type StyledTextProps = {
   size: `${number}px`;
   lineHeight?: `${number}px`;
   textAlign?: "center" | "left" | "right";
+  boldWeight?: 500 | 600;
+  regularWeight?: 400 | 500;
 };
 
 const StyledText = ({
@@ -18,6 +20,8 @@ const StyledText = ({
   size,
   lineHeight = "64px",
   textAlign = "left",
+  boldWeight = 600,
+  regularWeight = 400,
 }: StyledTextProps) => {
   const titleSplitted = text.split("*");
   const COMMON_TEXT_PROPS: TextProps = {
@@ -31,12 +35,12 @@ const StyledText = ({
   const wordStyles: { [key: string]: TextProps } = {
     bold: {
       as: "span",
-      fontWeight: "bold",
+      fontWeight: boldWeight,
       color: boldColor,
       ...COMMON_TEXT_PROPS,
     },
     regular: {
-      fontWeight: 400,
+      fontWeight: regularWeight,
       color: regularColor,
       ...COMMON_TEXT_PROPS,
     },

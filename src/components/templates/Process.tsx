@@ -19,6 +19,27 @@ const PROCESS_FLOW: ProcessFlowProps = {
       imgAlt: "Planning",
       imgPath: "/images/planning.svg",
     },
+    {
+      title: "*<b>Prototyping<b>*",
+      description:
+        "Preparar, apontar... já! A prototipação do produto *<br>* é iniciada, focando na *<b>melhor experiência de<b>* *<br>* *<b>usuário possível e com uma identidade visual<b>* *<br>* *<b>focada no seu público alvo.<b>*",
+      imgAlt: "Prototyping",
+      imgPath: "/images/prototyping.svg",
+    },
+    {
+      title: "*<b>Developing<b>*",
+      description:
+        "Com os *<b>desenvolvedores mais criativos do<b>* *<br>* *<b>mercado<b>*, o produto toma forma, enquanto as *<br>* linhas de código surgem. ",
+      imgAlt: "Developing",
+      imgPath: "/images/developing.svg",
+    },
+    {
+      title: "*<b>Deploy<b>*",
+      description:
+        "O lançamento é iniciado!!! Estaremos te *<br>* acompanhando de perto para ajudar a *<b>atrair<b>* *<br>* *<b>novos clientes para seu produto!<b>*",
+      imgAlt: "Deploy",
+      imgPath: "/images/deploy.svg",
+    },
   ],
 };
 
@@ -41,7 +62,6 @@ const Process = () => (
     </Box>
     <Box
       w="100%"
-      height="100%"
       bgImage="/images/circuit-bg.png"
       bgRepeat="repeat-y"
       bgSize="100%"
