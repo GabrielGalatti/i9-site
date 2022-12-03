@@ -2,7 +2,11 @@ import { Flex } from "@chakra-ui/react";
 import Logo from "../atoms/Logo";
 import Menu from "../molecules/Menu";
 
-const Header = () => {
+type HeaderProps = {
+  menuItens: string[];
+};
+
+const Header = ({ menuItens }: HeaderProps) => {
   return (
     <Flex
       py="40px"
@@ -12,7 +16,7 @@ const Header = () => {
       pos="relative"
     >
       <Logo />
-      <Menu itens={["HOME", "PORTFÓLIO", "PROCESSOS", "BLOG"]} />
+      <Menu itens={menuItens} />
     </Flex>
   );
 };

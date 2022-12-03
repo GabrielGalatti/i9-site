@@ -5,7 +5,12 @@ import { COLORS } from "../../config/colors";
 import StyledText from "../atoms/StyledText";
 import TechDivider from "../atoms/TechDivider";
 
-const Info = () => {
+type InfoProps = {
+  title: string;
+  description: string;
+};
+
+const Info = ({ description, title }: InfoProps) => {
   return (
     <Flex
       alignItems="center"
@@ -23,17 +28,19 @@ const Info = () => {
         pos="relative"
       >
         <StyledText
-          text="Transformamos a sua *<br>* *<b>ideia<b>* em *<b>negócio<b>*"
+          text={title}
           boldColor={COLORS.PRIMARY}
           regularColor={COLORS.TEXT}
           size="45px"
+          key={"title"}
         />
         <StyledText
-          text="A I9 ajuda você a *<b>construir o seu produto<b>* e *<br>* coloca-lo no mercado, para  *<b>começar a faturar o<b>* *<br>* *<b>mais rápido possível.<b>*"
+          text={description}
           boldColor={COLORS.TEXT}
           regularColor={COLORS.TEXT}
           size="18px"
           lineHeight="30px"
+          key={"description"}
         />
         <Flex pos="absolute" left={0} bottom={-30}>
           <TechDivider />
@@ -46,6 +53,7 @@ const Info = () => {
           unoptimized
           width={450}
           height={450}
+          priority
         />
       </Flex>
     </Flex>

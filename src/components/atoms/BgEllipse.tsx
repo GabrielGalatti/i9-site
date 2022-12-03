@@ -6,7 +6,7 @@ const BgEllipse = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <circle cx="443.5" cy="40" r="443.5" fill="#FFE38F" fill-opacity="0.22" />
+    <circle cx="443.5" cy="40" r="443.5" fill="#FFE38F" fillOpacity="0.22" />
   </svg>
 );
 
