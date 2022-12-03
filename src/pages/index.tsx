@@ -1,5 +1,6 @@
 import Head from "next/head";
 import HomeTemplate from "../components/templates/HomeTemplate";
+import Process from "../components/templates/Process";
 
 export default function Home() {
   const TITLE = "Transformamos a sua *<br>* *<b>ideia<b>* em *<b>negócio<b>*";
@@ -19,6 +20,7 @@ export default function Home() {
         menuItens={["HOME", "PORTFÓLIO", "PROCESSOS", "BLOG"]}
         callToActionLabel="VAMOS CONVERSAR"
       />
+      <Process />
     </>
   );
 }

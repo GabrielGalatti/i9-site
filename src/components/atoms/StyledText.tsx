@@ -8,6 +8,7 @@ type StyledTextProps = {
   regularColor: COLORS;
   size: `${number}px`;
   lineHeight?: `${number}px`;
+  textAlign?: "center" | "left" | "right";
 };
 
 const StyledText = ({
@@ -16,6 +17,7 @@ const StyledText = ({
   regularColor,
   size,
   lineHeight = "64px",
+  textAlign = "left",
 }: StyledTextProps) => {
   const titleSplitted = text.split("*");
   const COMMON_TEXT_PROPS: TextProps = {
@@ -23,6 +25,7 @@ const StyledText = ({
     fontSize: size,
     display: "inline-block",
     lineHeight,
+    textAlign,
   };
 
   const wordStyles: { [key: string]: TextProps } = {
