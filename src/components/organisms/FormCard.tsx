@@ -1,4 +1,10 @@
-import { Card, CardBody, CardHeader, Flex } from "@chakra-ui/react";
+import {
+  Card,
+  CardBody,
+  CardHeader,
+  Flex,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import { useMemo } from "react";
 import { COLORS } from "../../config/colors";
 import { FormField } from "../../types/FormField";
@@ -29,6 +35,12 @@ const FormCard = ({
     formState: { errors },
   } = useForm();
 
+  const { titleSize, textSize } = useBreakpointValue({
+    base: { titleSize: "14px", textSize: "14px" },
+    md: { titleSize: "16px", textSize: "14px" },
+    lg: { titleSize: "20px", textSize: "16px" },
+  }) as { titleSize: `${number}px`; textSize: `${number}px` };
+
   const fields: ControlledInputProps[] = useMemo(() => {
     return formFields.map((f) => ({
       ...f,
@@ -40,29 +52,30 @@ const FormCard = ({
   return (
     <Card
       borderRadius="20px"
-      py="60px"
-      px="40px"
+      py={["20px", "40px", "60px"]}
+      px={["10px", "20px", "40px"]}
       bgColor={COLORS.WHITE}
       boxShadow="0px 0px 12px rgba(0, 0, 0, 0.1)"
       w="100%"
     >
-      <CardBody flexDirection="column" display="flex">
+      <CardBody flexDirection="column" display="flex" gap="20px">
         <StyledText
           boldColor={COLORS.PRIMARY}
           regularColor={COLORS.PRIMARY}
-          size="20px"
+          size={titleSize}
           regularWeight={500}
           text={title}
           textAlign="center"
-          lineHeight="35px"
+          lineHeight={textSize !== "20px" ? "25px" : "35px"}
         />
         <StyledText
           boldColor={COLORS.TEXT}
           regularColor={COLORS.TEXT}
-          size="16px"
+          size={textSize}
           regularWeight={500}
           text={description}
           textAlign="center"
+          lineHeight={textSize !== "18px" ? "25px" : undefined}
         />
         <Form formFields={fields} />
         <Flex pt={25}>

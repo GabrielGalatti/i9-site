@@ -114,7 +114,7 @@ export default function Home() {
         submitLabel="ENVIAR"
       />
       <Footer
-        footerText="Copyright 2022 © Todos os direitos reservados"
+        footerText="Copyright © I9 The World 2022. All Rights Reserved"
         instagramLink="/"
       />
     </>

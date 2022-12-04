@@ -1,4 +1,4 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, useBreakpointValue } from "@chakra-ui/react";
 import { motion, Variants } from "framer-motion";
 import { COLORS } from "../../config/colors";
 import useI9Animation from "../../hooks/useI9Animation";
@@ -30,13 +30,19 @@ const ContactForm = ({
     finalState: "visible",
   });
 
+  const titleSize = useBreakpointValue({
+    base: "20px",
+    md: "30px",
+    lg: "40px",
+  }) as `${number}px`;
+
   const variants: Variants = {
     visible: {
       opacity: 1,
       x: 0,
       transition: { duration: 0.5, ease: "linear" },
     },
-    hidden: { opacity: 0, x: -200 },
+    hidden: { opacity: 0, x: "-10%" },
   };
   return (
     <Box w="100%" bgImage={bgPath} bgRepeat="repeat-y" bgSize="100%">
@@ -56,11 +62,12 @@ const ContactForm = ({
           ref={ref}
           initial="hidden"
         >
-          <Box bgColor={COLORS.PRIMARY} px={40} py={80} borderRadius={20}>
+          <Box bgColor={COLORS.PRIMARY} px={"40px"} py="60px" borderRadius={20}>
             <StyledText
               boldColor={COLORS.SECONDARY}
               regularColor={COLORS.WHITE}
-              size="40px"
+              size={titleSize}
+              lineHeight={titleSize !== "40px" ? "30px" : undefined}
               regularWeight={500}
               text={pageTitle}
             />
