@@ -32,7 +32,7 @@ const ProcessItem = ({
       opacity: 1,
       scale: 1,
       y: 0,
-      transition: { duration: 0.3, ease: "easeIn" },
+      transition: { duration: 0.5, ease: "easeIn" },
     },
     hidden: { opacity: 0, scale: 0, y: 200 },
   };
