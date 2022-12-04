@@ -4,6 +4,8 @@ import { COLORS } from "../../config/colors";
 
 import ImageCard from "../molecules/ImageCard";
 import CaseTitle from "../molecules/CaseTitle";
+import useI9Animation from "../../hooks/useI9Animation";
+import { motion, Variants } from "framer-motion";
 
 type SpecialCaseProps = {
   title: string;
@@ -22,6 +24,20 @@ const SpecialCase = ({
   title,
   casePath,
 }: SpecialCaseProps) => {
+  const { control, ref } = useI9Animation({
+    initialState: "hidden",
+    finalState: "visible",
+  });
+
+  const variants: Variants = {
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5, ease: "linear" },
+    },
+    hidden: { opacity: 0, x: 200 },
+  };
+
   return (
     <Box>
       <Box
@@ -40,7 +56,14 @@ const SpecialCase = ({
             subtitle={subtitle}
           />
         </Flex>
-        <Flex flex={1}>
+        <Flex
+          flex={1}
+          as={motion.div}
+          animate={control}
+          ref={ref}
+          variants={variants}
+          initial="hidden"
+        >
           <ImageCard imagePath={imagePath} description={description} />
         </Flex>
       </Box>

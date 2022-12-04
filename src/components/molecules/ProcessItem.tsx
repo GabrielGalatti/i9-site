@@ -28,7 +28,12 @@ const ProcessItem = ({
   });
 
   const variants: Variants = {
-    visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.3 } },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: { duration: 0.3, ease: "easeIn" },
+    },
     hidden: { opacity: 0, scale: 0, y: 200 },
   };
 
