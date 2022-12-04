@@ -1,7 +1,9 @@
 import { As, Icon, Button } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 import { COLORS } from "../../config/colors";
 import { poppins } from "../../config/fonts";
+import useI9Animation from "../../hooks/useI9Animation";
 
 type CommonButtonProps = {
   label: string;
@@ -29,6 +31,7 @@ const CommonButton = ({
     <Button
       {...getIconProps()}
       fontFamily={poppins.style.fontFamily}
+      as={motion.button}
       color={COLORS.PRIMARY}
       bgColor={COLORS.SECONDARY}
       border="none"
@@ -37,6 +40,8 @@ const CommonButton = ({
       fontWeight={600}
       borderRadius={10}
       boxShadow="2xl"
+      whileHover={{ scale: 1.1 }}
+      transition="0.1s linear"
       _hover={{
         bgColor: hoverColor,
         color: hoverColor == COLORS.PRIMARY ? COLORS.SECONDARY : COLORS.PRIMARY,

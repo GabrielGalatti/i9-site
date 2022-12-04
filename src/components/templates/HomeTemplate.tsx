@@ -4,6 +4,7 @@ import { COLORS } from "../../config/colors";
 import { poppins } from "../../config/fonts";
 
 import BgEllipse from "../atoms/BgEllipse";
+import CommonButton from "../atoms/CommonButton";
 import Header from "../organisms/Header";
 import Info from "../organisms/Info";
 
@@ -27,22 +28,13 @@ const HomeTemplate = ({
     <Header menuItens={menuItens} />
     <Info title={title} description={description} />
     <Flex pos="absolute" right="2%" bottom="2%" zIndex={1000}>
-      <Button
-        leftIcon={<Icon as={AiFillFire} color="currentcolor" />}
-        fontFamily={poppins.style.fontFamily}
-        color={COLORS.PRIMARY}
-        bgColor={COLORS.SECONDARY}
-        border="none"
-        py="15px"
-        px="30px"
-        fontWeight={600}
-        borderRadius={10}
-        boxShadow="2xl"
-        _hover={{ bgColor: COLORS.PRIMARY, color: COLORS.SECONDARY }}
-        cursor="pointer"
-      >
-        {callToActionLabel}
-      </Button>
+      <CommonButton
+        label={callToActionLabel}
+        onClick={() => {}}
+        hoverColor={COLORS.PRIMARY}
+        icon={AiFillFire}
+        iconPosition="left"
+      />
     </Flex>
   </Box>
 );
