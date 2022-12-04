@@ -46,6 +46,7 @@ const ContactForm = ({
         justifyContent="space-between"
         alignItems="center"
         gap={50}
+        flexDirection={["column", "column", "row"]}
       >
         <Flex
           flex={1}

@@ -1,4 +1,4 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, useBreakpointValue } from "@chakra-ui/react";
 
 import { COLORS } from "../../config/colors";
 
@@ -24,6 +24,12 @@ const SpecialCase = ({
   title,
   casePath,
 }: SpecialCaseProps) => {
+  const value = useBreakpointValue({
+    base: -200,
+    md: -200,
+    lg: 200,
+  });
+
   const { control, ref } = useI9Animation({
     initialState: "hidden",
     finalState: "visible",
@@ -35,7 +41,7 @@ const SpecialCase = ({
       x: 0,
       transition: { duration: 0.5, ease: "linear" },
     },
-    hidden: { opacity: 0, x: 200 },
+    hidden: { opacity: 0, x: value },
   };
 
   return (
@@ -47,6 +53,7 @@ const SpecialCase = ({
         alignItems="center"
         display="flex"
         py={100}
+        flexDirection={["column", "column", "row"]}
       >
         <Flex flex={1}>
           <CaseTitle
