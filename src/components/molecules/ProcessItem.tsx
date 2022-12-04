@@ -1,12 +1,11 @@
 import Image from "next/image";
 import { Flex } from "@chakra-ui/react";
-import { motion, useAnimation, Variants } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion, Variants } from "framer-motion";
 
 import { COLORS } from "../../config/colors";
 
 import StyledText from "../atoms/StyledText";
-import { useEffect } from "react";
+import useI9Animation from "../../hooks/useI9Animation";
 
 export type ProcessItemProps = {
   title: string;
@@ -23,20 +22,15 @@ const ProcessItem = ({
   imgPosition,
   title,
 }: ProcessItemProps) => {
-  const control = useAnimation();
-  const [ref, inView] = useInView({
-    rootMargin: "50px 0px",
+  const { control, ref } = useI9Animation({
+    initialState: "hidden",
+    finalState: "visible",
   });
 
   const variants: Variants = {
     visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.3 } },
     hidden: { opacity: 0, scale: 0, y: 200 },
   };
-
-  useEffect(() => {
-    if (inView) control.start("visible");
-    else control.start("hidden");
-  }, [control, inView]);
 
   return (
     <Flex
