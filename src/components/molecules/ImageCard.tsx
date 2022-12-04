@@ -9,14 +9,14 @@ type ImageCardProps = {
 };
 
 const ImageCard = ({ description, imagePath }: ImageCardProps) => (
-  <Card bgColor={COLORS.WHITE} borderRadius="20px" p="30px">
+  <Card bgColor={COLORS.WHITE} borderRadius="20px" p={["10px", "10px", "30px"]}>
     <CardBody>
       <Box
         bgImg={imagePath}
         bgPos="center"
         bgRepeat="no-repeat"
         bgSize="contain"
-        mb="30px"
+        mb={["5px", "10px", "30px"]}
         w="100%"
         h="200px"
       ></Box>

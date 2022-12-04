@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, useBreakpointValue } from "@chakra-ui/react";
 import { motion, Variants } from "framer-motion";
 import { useRouter } from "next/router";
 import { BsArrowRight } from "react-icons/bs";
@@ -23,6 +23,12 @@ const CaseTitle = ({
   subtitle,
 }: CaseTitleProps) => {
   const router = useRouter();
+  const titleSize = useBreakpointValue({
+    base: "25px",
+    md: "30px",
+    lg: "45px",
+  }) as `${number}px`;
+
   const { ref, control } = useI9Animation({
     initialState: "hidden",
     finalState: "visible",
@@ -51,20 +57,27 @@ const CaseTitle = ({
       gap="30px"
       alignItems="center"
       justifyItems="center"
+      mb={[30, 30, 0]}
     >
       <Flex flexDir="column">
         <StyledText
           text={title}
           boldColor={COLORS.SECONDARY}
           regularColor={COLORS.WHITE}
-          size="45px"
+          size={titleSize}
+          lineHeight={
+            titleSize !== "45px" ? `${parseInt(titleSize) + 20}px` : undefined
+          }
           textAlign="center"
         />
         <StyledText
           text={subtitle}
           boldColor={COLORS.WHITE}
           regularColor={COLORS.WHITE}
-          size="45px"
+          size={titleSize}
+          lineHeight={
+            titleSize !== "45px" ? `${parseInt(titleSize) + 20}px` : undefined
+          }
           textAlign="center"
         />
       </Flex>
