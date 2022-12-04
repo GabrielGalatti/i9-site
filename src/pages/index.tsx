@@ -1,7 +1,9 @@
 import Head from "next/head";
+import ContactForm from "../components/templates/ContactForm";
 import HomeTemplate from "../components/templates/HomeTemplate";
 import Process from "../components/templates/Process";
 import SpecialCase from "../components/templates/SpecialCase";
+import { FormField } from "../types/FormField";
 
 export default function Home() {
   const TITLE = "Transformamos a sua *<br>* *<b>ideia<b>* em *<b>negócio<b>*";
@@ -48,6 +50,33 @@ export default function Home() {
     },
   ];
 
+  const CONTACT_FORM: FormField[] = [
+    {
+      name: "name",
+      label: "Nome",
+      placeholder: "Gabriel Galatti",
+      required: true,
+    },
+    {
+      name: "email",
+      label: "E-mail",
+      placeholder: "gabrielG@email.dev",
+      required: true,
+    },
+    {
+      name: "phone",
+      label: "Telefone",
+      placeholder: "(11) 99999-9999",
+      required: true,
+    },
+    {
+      name: "company",
+      label: "Nome da Empresa",
+      placeholder: "I9 The World",
+      required: true,
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -58,7 +87,7 @@ export default function Home() {
       <HomeTemplate
         title={TITLE}
         description={DESCRIPTION}
-        menuItens={["HOME", "PORTFÓLIO", "PROCESSOS", "BLOG"]}
+        menuItens={[]}
         callToActionLabel="VAMOS CONVERSAR"
       />
       <Process
@@ -73,6 +102,15 @@ export default function Home() {
         subtitle="*<b>surgiu no mercado<b>* em *<br>* apenas *<b>1 mês?<b>*"
         title="Como a *<b>Não Chute<b>*"
         casePath="/"
+      />
+      <ContactForm
+        bgPath={PROCESS_BG_PATH}
+        formFields={CONTACT_FORM}
+        pageTitle="Não deixe para *<br>* *<b>amanhã<b>* o negócio que *<br>* pode construir *<b>hoje<b>*!"
+        formTitle="*<b>CONVERSE COM O TIME DE PROJETOS<b>*"
+        formDescription="Deixe seus dados e entraremos em contato com você!"
+        onSubmit={(data) => console.log(data)}
+        submitLabel="ENVIAR"
       />
     </>
   );

@@ -25,6 +25,9 @@ const ProcessItem = ({
   const { control, ref } = useI9Animation({
     initialState: "hidden",
     finalState: "visible",
+    customOptions: {
+      rootMargin: "100px 0px",
+    },
   });
 
   const variants: Variants = {
@@ -32,7 +35,7 @@ const ProcessItem = ({
       opacity: 1,
       scale: 1,
       y: 0,
-      transition: { duration: 0.5, ease: "easeIn" },
+      transition: { duration: 0.3, ease: "easeIn" },
     },
     hidden: { opacity: 0, scale: 0, y: 200 },
   };

@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 
 import { COLORS } from "../../config/colors";
 import { poppins } from "../../config/fonts";
-import useI9Animation from "../../hooks/useI9Animation";
 
 type CommonButtonProps = {
   label: string;
@@ -11,6 +10,7 @@ type CommonButtonProps = {
   onClick: () => void;
   iconPosition?: "left" | "right";
   hoverColor?: COLORS;
+  fullwidth?: boolean;
 };
 
 const CommonButton = ({
@@ -19,6 +19,7 @@ const CommonButton = ({
   icon,
   iconPosition,
   hoverColor = COLORS.PRIMARY,
+  fullwidth,
 }: CommonButtonProps) => {
   const getIconProps = () => {
     if (!icon) return {};
@@ -42,6 +43,7 @@ const CommonButton = ({
       boxShadow="2xl"
       whileHover={{ scale: 1.1 }}
       transition="0.1s linear"
+      w={fullwidth ? "100%" : "auto"}
       _hover={{
         bgColor: hoverColor,
         color: hoverColor == COLORS.PRIMARY ? COLORS.SECONDARY : COLORS.PRIMARY,
