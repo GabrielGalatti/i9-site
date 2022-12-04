@@ -25,7 +25,7 @@ const ProcessItem = ({
 }: ProcessItemProps) => {
   const control = useAnimation();
   const [ref, inView] = useInView({
-    rootMargin: "150px 0px",
+    rootMargin: "50px 0px",
   });
 
   const variants: Variants = {
