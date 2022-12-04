@@ -1,5 +1,7 @@
 import { Box, Flex } from "@chakra-ui/react";
+import { motion, Variants } from "framer-motion";
 import { COLORS } from "../../config/colors";
+import useI9Animation from "../../hooks/useI9Animation";
 import { FormField } from "../../types/FormField";
 import StyledText from "../atoms/StyledText";
 import FormCard from "../organisms/FormCard";
@@ -23,6 +25,19 @@ const ContactForm = ({
   pageTitle,
   submitLabel,
 }: ContactFormProps) => {
+  const { control, ref } = useI9Animation({
+    initialState: "hidden",
+    finalState: "visible",
+  });
+
+  const variants: Variants = {
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5, ease: "linear" },
+    },
+    hidden: { opacity: 0, x: -200 },
+  };
   return (
     <Box w="100%" bgImage={bgPath} bgRepeat="repeat-y" bgSize="100%">
       <Flex
@@ -32,7 +47,14 @@ const ContactForm = ({
         alignItems="center"
         gap={50}
       >
-        <Flex flex={1}>
+        <Flex
+          flex={1}
+          as={motion.div}
+          animate={control}
+          variants={variants}
+          ref={ref}
+          initial="hidden"
+        >
           <Box bgColor={COLORS.PRIMARY} px={40} py={80} borderRadius={20}>
             <StyledText
               boldColor={COLORS.SECONDARY}
