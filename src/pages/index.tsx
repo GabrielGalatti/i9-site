@@ -1,6 +1,7 @@
 import Head from "next/head";
 import HomeTemplate from "../components/templates/HomeTemplate";
 import Process from "../components/templates/Process";
+import SpecialCase from "../components/templates/SpecialCase";
 
 export default function Home() {
   const TITLE = "Transformamos a sua *<br>* *<b>ideia<b>* em *<b>negócio<b>*";
@@ -64,6 +65,14 @@ export default function Home() {
         title={PROCESS_TITLE}
         bgPath={PROCESS_BG_PATH}
         processItems={PROCESS_ITEMS}
+      />
+      <SpecialCase
+        callToActionLabel="CONHECER O CASE"
+        description="A *<b>Não Chute<b>* é uma *<b>plataforma gamificada<b>* de educação criada no ano de 2022. Entenda como a I9 ajudou no processo de criação e lançamento deste produto."
+        imagePath="/images/naochute.png"
+        subtitle="*<b>surgiu no mercado<b>* em *<br>* apenas *<b>1 mês?<b>*"
+        title="Como a *<b>Não Chute<b>*"
+        casePath="/"
       />
     </>
   );

@@ -13,7 +13,7 @@ type ProcessProps = {
 };
 
 const Process = ({ bgPath, processItems, title }: ProcessProps) => (
-  <Box pos="relative" h="100vh" pt="50px">
+  <Box pos="relative" pt="50px">
     <Box
       w="100"
       bgColor={COLORS.PRIMARY}
@@ -30,7 +30,7 @@ const Process = ({ bgPath, processItems, title }: ProcessProps) => (
       />
     </Box>
     <Box w="100%" bgImage={bgPath} bgRepeat="repeat-y" bgSize="100%">
-      <Flex px="10%" pt="5%">
+      <Flex px="10%" pt="5%" pb="5%">
         <ProcessFlow processItems={processItems} />
       </Flex>
     </Box>
