@@ -44,9 +44,13 @@ const ProcessItem = ({
     <Flex
       w="100%"
       justifyContent="space-between"
-      flexDir={imgPosition == "left" ? "row" : "row-reverse"}
       alignItems="center"
       as={motion.div}
+      flexDirection={[
+        "column",
+        "column",
+        imgPosition == "left" ? "row" : "row-reverse",
+      ]}
       initial="hidden"
       variants={variants}
       ref={ref}
