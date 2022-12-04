@@ -17,6 +17,8 @@ const Footer = ({ footerText, instagramLink }: FooterProps) => {
       alignItems="center"
       px="5%"
       py="20px"
+      flexDir={["column", "column", "row"]}
+      gap={["20px", "20px", "0px"]}
       bgColor={COLORS.PRIMARY}
     >
       <Flex h="50px">
@@ -30,7 +32,7 @@ const Footer = ({ footerText, instagramLink }: FooterProps) => {
         lineHeight="16px"
       />
       <a href={instagramLink}>
-        <Icon as={BsInstagram} color={COLORS.WHITE} boxSize={20} />
+        <Icon as={BsInstagram} color={COLORS.WHITE} boxSize="20px" />
       </a>
     </Box>
   );

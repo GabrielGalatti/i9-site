@@ -78,7 +78,7 @@ const FormCard = ({
           lineHeight={textSize !== "18px" ? "25px" : undefined}
         />
         <Form formFields={fields} />
-        <Flex pt={25}>
+        <Flex>
           <CommonButton
             label={submitLabel}
             onClick={handleSubmit(submit)}
