@@ -1,5 +1,6 @@
 import Head from "next/head";
 import ContactForm from "../components/templates/ContactForm";
+import Footer from "../components/templates/Footer";
 import HomeTemplate from "../components/templates/HomeTemplate";
 import Process from "../components/templates/Process";
 import SpecialCase from "../components/templates/SpecialCase";
@@ -111,6 +112,10 @@ export default function Home() {
         formDescription="Deixe seus dados e entraremos em contato com você!"
         onSubmit={(data) => console.log(data)}
         submitLabel="ENVIAR"
+      />
+      <Footer
+        footerText="Copyright 2022 © Todos os direitos reservados"
+        instagramLink="/"
       />
     </>
   );

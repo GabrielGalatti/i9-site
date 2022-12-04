@@ -4,8 +4,8 @@ import { poppins } from "../../config/fonts";
 
 type StyledTextProps = {
   text: string;
-  boldColor: COLORS;
-  regularColor: COLORS;
+  boldColor?: COLORS;
+  regularColor?: COLORS;
   size: `${number}px`;
   lineHeight?: `${number}px`;
   textAlign?: "center" | "left" | "right";
@@ -15,8 +15,8 @@ type StyledTextProps = {
 
 const StyledText = ({
   text,
-  boldColor,
-  regularColor,
+  boldColor = COLORS.PRIMARY,
+  regularColor = COLORS.TEXT,
   size,
   lineHeight = "64px",
   textAlign = "left",
