@@ -3,24 +3,24 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/GabrielGalatti/i9-site/blob/master/LICENSE">    <img alt="MIT License" src="https://img.shields.io/github/license/GabrielGalatti/jutsu-ui"/>
+  <a href="https://github.com/GabrielGalatti/i9-site/blob/master/LICENSE">    <img alt="MIT License" src="https://img.shields.io/github/license/GabrielGalatti/i9-site"/>
 
   </a>
   <img alt="Github Stars" src="https://badgen.net/github/stars/GabrielGalatti/i9-site" />
 </p>
 
-## Descrição do Projeto💡
-O objetivo deste projeto é ser uma landing page interativa para a minha consultoria de desenvolvimento chamada I9 The World, que tem como foco ajudar empreendedores a construir seus produtos de maneira rápida e escalável.
+## Project description💡
+The goal of this project is to be an interactive landing page for my development consultancy called I9 The World, which focuses on helping entrepreneurs build their products quickly and scalably.
 
-> Status do Projeto:  Pausado 🛑
+> Project Status: Paused 🛑
 
-## Protótipo & Design🧪
+## Prototype & Design🧪
 
-O protótipo feito no Figma pode ser acessado  [clicando aqui](https://www.figma.com/file/iwekR7iuJK9zbUZoJZpqHB/I9-The-World---Site-2022?node-id=0%3A1&t=UIsnTs5FbxdOhor3-1).
+The prototype made in Figma can be accessed by [clicking here](https://www.figma.com/file/iwekR7iuJK9zbUZoJZpqHB/I9-The-World---Site-2022?node-id=0%3A1&t=UIsnTs5FbxdOhor3-1).
 
-![enter image description here](https://lh3.googleusercontent.com/fQFUBeq6gO6MMX1-u9-xzKha7CDRZtNTSsgya47RWHH5jBWlmLRKvpueaKO-7RFLzfMwkxnsrenvI5RxRjvVNI4ZuzjD_dKhSnAlb4yMgZBDDm_8M-yu5pNkEJLFrDVvH0bttaeM=w00)
+![I9 The World](https://lh3.googleusercontent.com/fQFUBeq6gO6MMX1-u9-xzKha7CDRZtNTSsgya47RWHH5jBWlmLRKvpueaKO-7RFLzfMwkxnsrenvI5RxRjvVNI4ZuzjD_dKhSnAlb4yMgZBDDm_8M-yu5pNkEJLFrDVvH0bttaeM=w00)
 
-## Tecnologias utilizadas 🧑🏽‍💻
+## Technologies used 🧑🏽‍💻
 
 | Technology | Version |
 |:---:|:---:|
@@ -28,41 +28,41 @@ O protótipo feito no Figma pode ser acessado  [clicando aqui](https://www.figma
 |<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg" height="50px"/>| 13.0.5 |
 |<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="50px"/>| 4.9.3 |
 
-> O layout foi estruturado utilizando a biblioteca **[Chakra UI](https://chakra-ui.com/)** 💛
+> The layout was structured using the library **[Chakra UI](https://chakra-ui.com/)** 💛
 
-## Estrutura dos componentes ⚛️
+## Components Structure ⚛️
  
- Neste projeto resolvi me aventurar e fazer a utilização da [Atomic Design Methodology](https://atomicdesign.bradfrost.com/chapter-2/) para criar uma estrutura hierárquica de componentes com apenas uma responsabilidade.
+In this project I decided to venture out and make use of the [Atomic Design Methodology](https://atomicdesign.bradfrost.com/chapter-2/) to create a hierarchical structure of components with only one responsibility.
 
 ```mermaid 
 flowchart LR
-id1(Átomos) --> id2(Moléculas) --> id3(Organismos) --> id4(Templates) --> id5(Páginas)
+id1(Atoms) --> id2(Molecules) --> id3(Organisms) --> id4(Templates) --> id5(Pages)
  ```
 
-> Utilizando Atomic Design percebi que houve uma melhora na qualidade de código e na facilidade de manutenção  ⚙️
+> Using Atomic Design I realized that there was an improvement in code quality and ease of maintenance ⚙️
 
-## Como rodar a aplicação? ✅
+## How to run the application? ✅
 
-No terminal clone o projeto:
+In the terminal clone the project:
 
     git clone https://github.com/GabrielGalatti/i9-site.git
 
-Entre na pasta do projeto:
+Enter the project folder:
 
     cd i9-site
 
-Instale as dependências necessárias:
+Install the required dependencies:
 
     yarn install
 
-Execute a aplicação:
+Run the application:
 
     yarn start
 
-## Deploy da aplicação🚀
+## Application Deployment🚀
 
-O deploy foi realizado na [Vercel](https://vercel.com/) e pode ser acessado clicando [aqui](https://www.i9theworld.com/).
+The deployment was performed in [Vercel](https://vercel.com/)and can be accessed by clicking [here](https://www.i9theworld.com/).
 
-## Gostou? Apoie o projeto! 🍻
-<a href="https://www.buymeacoffee.com/gabrielgalatti"><img src="https://img.buymeacoffee.com/button-api/?text=Doar uma cerveja&emoji=🍺&slug=gabrielgalatti&button_colour=FF5F5F&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" /></a>
+## Did you like it? Support the project! 🍻
+<a href="https://www.buymeacoffee.com/gabrielgalatti"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a beer&emoji=🍺&slug=gabrielgalatti&button_colour=FF5F5F&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" /></a>
 
