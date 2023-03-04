@@ -3,8 +3,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/GabrielGalatti/i9-site/blob/master/LICENSE">
-    <img alt="MIT License" src="https://img.shields.io/github/license/GabrielGalatti/i9-site"/>
+  <a href="https://github.com/GabrielGalatti/i9-site/blob/master/LICENSE">    <img alt="MIT License" src="https://img.shields.io/github/license/GabrielGalatti/jutsu-ui"/>
+
   </a>
   <img alt="Github Stars" src="https://badgen.net/github/stars/GabrielGalatti/i9-site" />
 </p>
