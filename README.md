@@ -1,34 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+  <img src="https://lh3.googleusercontent.com/Moh48iEDq5XlqpSPMZe16YNmDibKGiqjVc9elNt2eq-iqrPCum9SizshmD6a8YlaD_BVsGc4u9D9gBoM9aQLh1V14uerIETlLUvpxEBL8rn7Q66bK6KZvsX6RSgNgJ4mnV-cyPff=w600" />
+</p>
 
-## Getting Started
+## Descrição do Projeto💡
+O objetivo deste projeto é ser uma landing page interativa para a minha consultoria de desenvolvimento chamada I9 The World, que tem como foco ajudar empreendedores a construir seus produtos de maneira rápida e escalável.
 
-First, run the development server:
+> Status do Projeto:  Pausado 🛑
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Protótipo & Design🧪
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O protótipo feito no Figma pode ser acessado  [clicando aqui](https://www.figma.com/file/iwekR7iuJK9zbUZoJZpqHB/I9-The-World---Site-2022?node-id=0%3A1&t=UIsnTs5FbxdOhor3-1).
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+![enter image description here](https://lh3.googleusercontent.com/fQFUBeq6gO6MMX1-u9-xzKha7CDRZtNTSsgya47RWHH5jBWlmLRKvpueaKO-7RFLzfMwkxnsrenvI5RxRjvVNI4ZuzjD_dKhSnAlb4yMgZBDDm_8M-yu5pNkEJLFrDVvH0bttaeM=w00)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Tecnologias utilizadas 🧑🏽‍💻
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+| Technology | Version |
+|:---:|:---:|
+|  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" height="50px"/>| 18.2.0 |
+|<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg" height="50px"/>| 13.0.5 |
+|<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="50px"/>| 4.9.3 |
 
-## Learn More
+> O layout foi estruturado utilizando a biblioteca **[Chakra UI](https://chakra-ui.com/)** 💛
 
-To learn more about Next.js, take a look at the following resources:
+## Estrutura dos componentes ⚛️
+ 
+ Neste projeto resolvi me aventurar e fazer a utilização da [Atomic Design Methodology](https://atomicdesign.bradfrost.com/chapter-2/) para criar uma estrutura hierárquica de componentes com apenas uma responsabilidade.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```mermaid 
+flowchart LR
+id1(Átomos) --> id2(Moléculas) --> id3(Organismos) --> id4(Templates) --> id5(Páginas)
+ ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+> Utilizando Atomic Design percebi que houve uma melhora na qualidade de código e na facilidade de manutenção  ⚙️
 
-## Deploy on Vercel
+## Como rodar a aplicação? ✅
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+No terminal clone o projeto:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    git clone https://github.com/GabrielGalatti/i9-site.git
+
+Entre na pasta do projeto:
+
+    cd i9-site
+
+Instale as dependências necessárias:
+
+    yarn install
+
+Execute a aplicação:
+
+    yarn start
+
+## Deploy da aplicação🚀
+
+O deploy foi realizado na [Vercel](https://vercel.com/) e pode ser acessado clicando [aqui](https://www.i9theworld.com/).
